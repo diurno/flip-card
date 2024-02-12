@@ -1,0 +1,75 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/flip-card",
+	"version": "0.1.0",
+	"title": "Flip Card",
+	"category": "widgets",
+	"description": "This plugin allows you to easily create flip cards within Gutenberg, making your website more friendly and attractive for visitors.",
+	"example": {},
+	"attributes": {
+		"flipDirection": {
+			"type": "string",
+			"default": "left-to-right"
+		},
+		"frontText": {
+			"type": "string",
+			"default": "Initial Front Text"
+		},
+		"frontTextColor": {
+			"type": "string", 
+			"default": "#7d8593"
+		},
+		"backText": {
+			"type": "string",
+			"default": "Initial Rear Text"
+		},
+		"backTextColor": {
+			"type": "string", 
+			"default": "#7d8593"
+		},    
+		"frontBgColor": {
+			"type": "string",
+			"default": "#ffffff"  
+		},
+		"backBgColor": {
+			"type": "string",
+			"default": "#ffffff"  
+		},
+		"cardBorderRadius": {
+			"type": "number",
+			"default": 0
+		},
+		"bgImageFront": {
+			"type": "string"
+		},
+		"bgImageBack": {
+			"type": "string"
+		},
+		"mediaFrontObject": { 
+			"type": "object"
+		},
+		"mediaBackObject": { 
+			"type": "object"
+		},
+		"focalPointFrontSide": { 
+			"type": "object",
+			"default": {"x": 0.5, "y": 0.5}
+		},
+		"focalPointBackSide": {
+			"type": "object",
+			"default": {"x": 0.5, "y": 0.5}
+		},
+		"fontSizeFront": { "type": "number"},
+		"fontSizeBack": { "type": "number"},
+		"cardLink": { "type": "string" }
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "flip-card",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

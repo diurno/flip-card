@@ -1,0 +1,138 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-flip-card {
+	border: 1px dotted rgb(57, 55, 55);
+}
+
+
+.flip-card {
+	background-color: transparent;
+	height: 300px;
+	width: 300px;
+	perspective: 1000px;
+}
+  
+.flip-card .flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card .flip-card-inner .flip-card-front, 
+.flip-card .flip-card-inner .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	 display: flex;
+	align-items: center;
+	overflow: hidden;
+	padding: 3px;
+}
+
+/* HOVER STYLES */  
+  
+.flip-card.right-to-left:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+.flip-card.left-to-right:hover .flip-card-inner {
+	transform: rotateY(-180deg);
+}
+.flip-card.bottom-to-top:hover .flip-card-inner {
+	transform: rotateX(-180deg);
+}
+.flip-card.top-to-bottom:hover .flip-card-inner {
+	transform: rotateX(180deg);
+}
+
+.flip-card.right-to-lef:hover .flip-card-back,
+.flip-card.left-to-right:hover .flip-card-back {
+	transform: rotateY(180deg);
+}
+.flip-card.bottom-to-top:hover .flip-card-back,
+.flip-card.top-to-bottom:hover .flip-card-back {
+	transform: rotateX(-180deg);
+}
+
+
+/* HOVER STYLES */  
+  
+.flip-card .flip-card-inner .flip-card-front {
+	background-color: #bbb;
+	color: black;
+}
+  
+.flip-card .flip-card-inner .flip-card-back .inner-text,
+.flip-card .flip-card-inner .flip-card-front .inner-text {
+	flex-basis: 100%;
+	text-align: center;
+	height: 100%;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+  
+.flip-card .flip-card-inner .flip-card-back .inner-text {
+	line-height: 30px;
+}
+
+.flip-card .flip-card-inner .flip-card-back {
+	background-color: #2980b9;
+	color: white;
+	transform: rotateY(180deg);
+}
+.flip-card .flip-card-inner .flip-card-back .flip-card-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+  /* EDITOR STYLES */
+
+.block-editor-block-inspector .components-panel__row .components-flex,
+.block-editor-block-inspector .components-panel__row .components-range-control,
+.block-editor-block-inspector .flip-card-content .components-panel__row .components-base-control {
+	width: 100%;
+}
+
+.block-editor-block-inspector .components-panel__row.has-flex-wrap {
+	flex-wrap: wrap;
+	gap: 1em 0;
+}
+
+.block-editor-block-inspector .components-base-control {
+	vertical-align: top;
+}
+
+.block-editor-block-inspector .components-base-control.font-size {
+	display: inline-block;
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+.block-editor-block-inspector .components-base-control.media-label {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.block-editor-block-inspector .components-button.is-button.is-primary,
+.block-editor-block-inspector .components-button.is-button.is-destructive {
+	margin-bottom: 10px;
+}
+
+.block-editor-block-inspector .wrapper-media {
+	padding: 10px;
+	background-color: #f4f4f5;
+	margin: 10px 0;
+}
